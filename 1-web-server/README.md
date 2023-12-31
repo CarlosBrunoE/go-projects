@@ -1,11 +1,5 @@
 # 1 Web Server
 
-How to run it?
-
-go run main.go
-
-# 1 Web Server
-
 A simple web server written in Go using the `net/http` package.
 
 ## Getting Started
