@@ -1,0 +1,27 @@
+package main
+
+import (
+	"log"
+	"rest-gin-psql/database"
+	"rest-gin-psql/model"
+
+	"github.com/joho/godotenv"
+)
+
+func main() {
+	loadEnv()
+	loadDatabase()
+}
+
+func loadDatabase() {
+	database.Connect()
+	database.Database.AutoMigrate(&model.User{})
+	database.Database.AutoMigrate(&model.Entry{})
+}
+
+func loadEnv() {
+	err := godotenv.Load(".env.local")
+	if err != nil {
+		log.Fatal("Error loading .env file")
+	}
+}
