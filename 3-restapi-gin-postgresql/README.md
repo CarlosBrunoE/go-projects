@@ -24,6 +24,7 @@ DB_PORT="5432"
 # Authentication credentials
 TOKEN_TTL="2000"
 JWT_PRIVATE_KEY=""
+```
 
 ## Steps:
 
@@ -39,7 +40,6 @@ docker-compose up -d
 go run .
 ```
 
-To test API run:
 
 3. Create our user:
 
